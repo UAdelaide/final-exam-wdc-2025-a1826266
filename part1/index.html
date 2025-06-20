@@ -20,7 +20,7 @@
                 async fetchDog(){
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
                     const json = await res.json();
-                    this.dogimage = data.message;
+                    this.dogimage = json.message;
                 }
             },
             mounted(){
