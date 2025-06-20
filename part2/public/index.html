@@ -43,6 +43,10 @@
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({username, password})
           })
+          .then(res=>{
+            if(!res.ok) throw new Error('Fail login');
+            return res.json();
+          })
           .then(data=>{
             if (data.user.role === 'owner'){
               window.location.href = '/owner-dashboard.html';
