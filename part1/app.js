@@ -45,7 +45,7 @@ async function main() {
             res.status(500).json('failed dogs');
         }
     });
-    app.get('/api/walkrequests/open', async (req, res)=>{
+    app.get('/api/walkrequests/open', async (req, res)=> {
         try{
             const[rows] = await connection.query("SELECT * FROM WalkRequests WHERE status = 'open';");
             res.json(rows);
