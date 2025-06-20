@@ -49,9 +49,11 @@
           })
           // Parse Json response
           .then(res=>{
+            // If res not ok throw error
             if(!res.ok) throw new Error('Fail login');
             return res.json();
           })
+          // 
           .then(data=>{
             if (data.user.role === 'owner'){
               window.location.href = '/owner-dashboard.html';
