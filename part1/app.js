@@ -25,8 +25,8 @@ try{
         ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', '30', 'Parklands' 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', '45', 'Beachside Ave' 'accepted'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Bugg'), '2025-06-10 08:00:00', '60', 'Wetlands' 'open'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', '90', 'Sanctuary' 'accepted'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', '120', 'Pet Place' 'closed'),`)
+        ((SELECT dog_id FROM Dogs WHERE name = 'Riku'), '2025-06-10 08:00:00', '90', 'Sanctuary' 'accepted'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Brendan'), '2025-06-10 08:00:00', '120', 'Pet Place' 'closed'),`)
 
 }
 }
