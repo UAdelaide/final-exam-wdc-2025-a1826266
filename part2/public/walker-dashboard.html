@@ -55,6 +55,7 @@
             const res = await fetch('/api/users/me');
             user.value = await res.json();
           }
+          // Catches errors
           catch(err){
             error.value = err.message;
           }
