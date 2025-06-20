@@ -47,9 +47,10 @@
         const message = ref('');
         const error = ref('');
         const user = ref(null);
-                async function getUser(){
+        async function getUser(){
           try{
-            const res = await fetch('/api/users/me')
+            const res = await fetch('/api/users/me');
+            user.value = await res.json();
           }
         }
         async function loadWalkRequests() {
