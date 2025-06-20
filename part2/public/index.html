@@ -93,7 +93,7 @@
           .catch(err=> alert(err.message));
         }
       },
-      mounted(){
+     async mounted(){
         try {
         const doginfo = await fetch('/api/users/dogs');
         const dogs = await res.json();
