@@ -25,9 +25,11 @@
             <!--Added form for dog name-->
             <label class="form-label">Select Your Dog</label>
             <select v-model="form.dog_id" type="number" class="form-control">
-              <!--Added form for dog name-->
+              <!--Placeholder selection that has been disabled-->
               <option value="" disabled selected>--Choose a dog--</option>
+              <!--Populates as dog count increases-->
               <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
+                <!---->
                 {{ dog.name }}
               </option>
             </select>
