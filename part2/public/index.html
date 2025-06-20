@@ -42,13 +42,14 @@
     </tr>
     </thead>
   <tbody>
-    <!---->
+    <!--For loop for dog in dogs, for each dog print the attributes-->
     <tr v-for="dog in dogs" :key="dog.dog_id">
       <td>{{ dog.dog_id }}</td>
       <td>{{ dog.name }}</td>
       <td>{{ dog.size }}</td>
       <td>{{ dog.owner_id }}</td>
       <td>
+        <!--Image for each dog-->
         <img :src="dog.image" alt="Dog picture" style="width: 200px; height: auto;" />
       </td>
     </tr>
