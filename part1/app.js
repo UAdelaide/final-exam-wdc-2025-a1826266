@@ -56,7 +56,7 @@ async function main() {
     app.get('/api/walkers/summary', async (req, res)=>{
         try{
             const[rows] = await connection.query(`SELECT Users.user_id AS walker_id, Users.username, Users.email,
-                COUNT(DISTINCT WalkApplications.request_id) AS total, AVG(Walk)`)
+                COUNT(DISTINCT WalkApplications.request_id) AS total, AVG(WalkRatings.rating) AS averagerate`)
         }
     })
 }
