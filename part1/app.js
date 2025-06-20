@@ -34,5 +34,6 @@ try{
 }
 async function main() {
     const connection = await mysql.createConnection(config);
+    await datainsert(connection);
     
 }
