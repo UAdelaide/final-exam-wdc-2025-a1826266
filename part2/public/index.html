@@ -44,7 +44,8 @@
             body: JSON.stringify({username, password})
           })
           .then(res=>){
-            if(!res.ok)
+            if(!res.ok) throw new Error('Fail login');
+            return res.json();
           }
         }
       }
