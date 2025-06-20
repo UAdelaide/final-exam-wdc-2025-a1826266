@@ -22,7 +22,7 @@ try{
         ((SELECT user_id FROM Users WHERE username = 'dogwalk'), 'Chris', 'small'),
         ((SELECT user_id FROM Users WHERE username = 'adam1'), 'Lorry', 'large');`);
     await connection.query(`INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
-        ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+        (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Ben'), '2025-07-10 10:00:00', 60, 'Wetlands', 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Chris'), '2025-08-10 11:30:00', 90, 'Sanctuary', 'accepted'),
