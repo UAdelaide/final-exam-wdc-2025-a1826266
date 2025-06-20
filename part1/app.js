@@ -7,3 +7,6 @@ const config = {
     user: 'root',
     database: 'DogWalkService'
 };
+async function datainsert() {
+    
+}
