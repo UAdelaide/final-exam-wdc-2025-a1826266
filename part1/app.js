@@ -74,3 +74,4 @@ async function main() {
     console.error('Error with DB');
 }
 }
+main();
