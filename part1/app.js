@@ -4,6 +4,6 @@ const app = express();
 const port = 8080;
 const config = {
     host: 'localhost',
-    user: root
-    database: DogSer
-}
+    user: root,
+    database: DogWalkService
+};
