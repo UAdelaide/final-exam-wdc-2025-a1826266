@@ -21,6 +21,6 @@ try{
         ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Ben', 'medium'),
         ((SELECT user_id FROM Users WHERE username = 'dogwalk'), 'Chris', 'small'),
         ((SELECT user_id FROM Users WHERE username = 'adam1'), 'Lorry', 'large');`)
-
+    await connection.query(`INSERT INTO `)
 }
 }
