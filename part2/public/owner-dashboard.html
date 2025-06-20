@@ -22,9 +22,10 @@
       <div class="card-body">
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
-            <!--Added form for dog -->
+            <!--Added form for dog name-->
             <label class="form-label">Select Your Dog</label>
             <select v-model="form.dog_id" type="number" class="form-control">
+              <!--Added form for dog name-->
               <option value="" disabled selected>--Choose a dog--</option>
               <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
                 {{ dog.name }}
