@@ -46,7 +46,9 @@ async function main() {
     });
     app.get('/api/walkrequests/open', async (req, res)=>{
         try{
-            const[rows] = await connection.query('SELECT * FROM WalkRequests WHERE status = 'open';')
+            const[rows] = await connection.query("SELECT * FROM WalkRequests WHERE status = 'open';")
+            res.json(rows);
         }
+        catch(err)
     })
 }
