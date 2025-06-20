@@ -7,6 +7,8 @@ const config = {
     user: 'root',
     database: 'DogWalkService'
 };
-async function datainsert() {
-    
+async function datainsert(connection) {
+try{
+    await.connection query
+}
 }
