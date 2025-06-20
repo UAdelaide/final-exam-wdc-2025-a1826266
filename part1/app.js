@@ -15,7 +15,12 @@ try{
     ('carol123', 'carol@example.com', 'hashed101', 'owner'),
     ('dogwalk', 'dogwalk@example.com', 'hashed202', 'walker'),
     ('adam1', 'adam@example.com', 'hashed111', 'walker');`)
-    await connection.query(``)
+    await connection.query(`INSERT INTO Dogs (owner_id, name, size) VALUES
+        ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Ben', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'dogwalk'), 'Chris', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'adam1'), 'Lorry', 'large');`)
 
 }
 }
