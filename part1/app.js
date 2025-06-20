@@ -36,6 +36,8 @@ async function main() {
     const connection = await mysql.createConnection(config);
     await datainsert(connection);
     app.get('/api/dogs', async (req, res)=> {
-        try
+        try{
+            const[rows] = await connection.query('SELECT * FROM Dogs;')
+        }
     })
 }
