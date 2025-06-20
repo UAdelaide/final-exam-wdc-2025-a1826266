@@ -13,3 +13,19 @@ To test your computer setup.
 [{"id":1,"title":"1984","author":"George Orwell"},{"id":2,"title":"To Kill a Mockingbird","author":"Harper Lee"},{"id":3,"title":"Brave New World","author":"Aldous Huxley"}]
 
 8. If this worked, then congratulations you are ready to start the exam.
+
+
+          return Promise.all(
+            dogs.map(dog =>
+              fetch('https://dog.ceo/api/breeds/image/random')
+              .then(res=>{
+                if (!res.ok) throw new Error("Failed image");
+                return res.json();
+              })
+              .then(image => ({ ...dog, image: image.message}))
+            )
+          )
+        })
+        .then(imageDogs =>{
+          this.dogs = imageDogs;
+        })
