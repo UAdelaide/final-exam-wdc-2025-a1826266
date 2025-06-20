@@ -94,7 +94,7 @@
         }
       },
       mounted(){
-        try{
+        try {
         const doginfo = fetch('/api/users/dogs');
         const dogs = await res.json();
         for (const dog of dogs){
