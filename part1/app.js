@@ -44,5 +44,7 @@ async function main() {
             res.status(500).json('failed dogs');
         }
     });
-    app.get('')
+    app.get('/api/walkrequests/open', async (req, res)=>{
+        
+    })
 }
