@@ -33,6 +33,7 @@ try{
 }
 }
 async function main() {
+    try{
     const connection = await mysql.createConnection(config);
     await datainsert(connection);
     app.get('/api/dogs', async (req, res)=> {
@@ -69,5 +70,5 @@ async function main() {
     app.listen(port, () => {
         console.log(`listening on ${port}`);
     });
-
+} catch()
 }
