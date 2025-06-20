@@ -51,8 +51,9 @@
           .then(data=>{
             alert(`welcome`);
             if (data.user.role === 'owner'){
-              window.
+              window.location.href = '/owner-dashboard.html';
             }
+            else if{}
           })
           .catch(err=> alert(err.message));
         }
