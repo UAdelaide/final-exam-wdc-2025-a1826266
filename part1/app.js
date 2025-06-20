@@ -55,7 +55,7 @@ async function main() {
     });
     app.get('/api/walkers/summary', async (req, res)=>{
         try{
-            const
+            const[rows] = await connection.query()
         }
     })
 }
