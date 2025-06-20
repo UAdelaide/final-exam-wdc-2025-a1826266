@@ -16,12 +16,16 @@
                 data(){
                     return {dogimage: ''}
                 },
+                methods:{
                 async mounted(){
                     const res = await fetch('https://dog.ceo/dog-api/documentation/random');
                     const json = await res.json();
                     this.dogimage = data.message;
                 }
-                
+            },
+            mounted(){
+                this.fetch
+            }
             }).mount('#app')
         </script>
     </body>
