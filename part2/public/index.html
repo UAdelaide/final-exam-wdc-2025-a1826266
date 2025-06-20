@@ -44,7 +44,7 @@
           fetch('/api/users/login',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // 
+            // Turn username and password into a JSON string for the request
             body: JSON.stringify({username, password})
           })
           .then(res=>{
