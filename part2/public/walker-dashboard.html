@@ -10,6 +10,7 @@
 <body class="bg-light">
   <div id="app" class="container py-4">
     <h1 class="mb-4 text-success">Walker Dashboard</h1>
+    <!--Logout button -->
     <div style="text-align: right;">
      <button @click='logout' style="margin-bottom: 8px;">Logout</button>
      </div>
@@ -79,6 +80,7 @@
         onMounted(() => {
           loadWalkRequests();
         });
+        // Added logout function and reutrn
         function logout(){
           localStorage.removeItem('user');
           window.location.href = '/index.html';
