@@ -70,5 +70,7 @@ async function main() {
     app.listen(port, () => {
         console.log(`listening on ${port}`);
     });
-} catch()
+} catch(err){
+    console.error('Error with DB');
+}
 }
