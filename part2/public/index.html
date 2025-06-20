@@ -99,10 +99,9 @@
         for (const dog of dogs){
           const imagerandom = await fetch('https://dog.ceo/api/breeds/image/random');
           const imageData = await imagerandom.json();
+          dog.image = imagerandom.message;
         }
-        .then(imageDogs =>{
           this.dogs = imageDogs;
-        })
         .catch(err=> console.error('error finding dogg'))
       }
     }).mount('#app');
