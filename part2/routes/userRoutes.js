@@ -8,6 +8,7 @@ router.get('/:ownerId/dogs', async (req, res)=>{
   try{
     // Database query to find the dogs
     const[rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id=?`, [ownerId]);
+    // Send with json
     res.json(rows);
   }
   catch(err){
