@@ -40,7 +40,8 @@
           const password = document.getElementById('password').value;
           fetch('/users/login',{
             method: 'POST',
-            headers;
+            headers: {'Content-Type': 'application/json'},
+            
           })
         }
       }
