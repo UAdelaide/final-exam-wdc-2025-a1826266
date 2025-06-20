@@ -27,6 +27,7 @@
 
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
+    <!---->
       <h2 style="text-align: center;">All Registered Dogs</h2>
   <table border="1" style="margin:0 auto; text-align: center;">
     <thead>
@@ -108,8 +109,9 @@
           // Add image to the current dog
           dog.image = imageData.message;
         }
-        // Re
+        // Re-render table with updated info
         this.dogs = dogs;
+        // Catch errors
       }catch(err){
         console.error('error finding dog');
       }
