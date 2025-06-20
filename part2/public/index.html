@@ -47,6 +47,7 @@
             // Turn username and password into a JSON string for the request
             body: JSON.stringify({username, password})
           })
+          // Parse Json response
           .then(res=>{
             if(!res.ok) throw new Error('Fail login');
             return res.json();
