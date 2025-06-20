@@ -8,7 +8,7 @@ router.get('/:ownerId/dogs', async (req, res)=>{
     res.json(rows);
   }
   catch(err){
-    res.
+    res.status(500).json({error: 'failed'});
   }
 })
 // GET all users (for admin/testing)
