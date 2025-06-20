@@ -70,7 +70,11 @@ router.post('/login', async (req, res) => {
 });
 router.get('/dogs', async(req, res)=>{
   try{
-    cosnt[rows] = await db.query
+    cosnt[rows] = await db.query('SELECT * FROM Dogs');
+    res.json(rows);
+  }
+  catch(err){
+    res.status(500).json()
   }
 })
 module.exports = router;
