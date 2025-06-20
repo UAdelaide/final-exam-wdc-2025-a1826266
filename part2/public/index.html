@@ -104,7 +104,6 @@
                 if (!res.ok) throw new Error("Failed image");
                 return res.json();
               })
-              .then(res=> res.json())
               .then(image => ({ ...dog, image: image.message}))
             )
           )
