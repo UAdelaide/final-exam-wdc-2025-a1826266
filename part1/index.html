@@ -18,7 +18,8 @@
                 },
                 async mounted(){
                     const res = await fetch('https://dog.ceo/dog-api/documentation/random');
-                    
+                    const json = await res.json();
+                    this.dogimage = json.message;
                 }
             }).mount('#app')
         </script>
