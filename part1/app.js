@@ -26,7 +26,7 @@ try{
         (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
         (3, '2025-07-10 10:00:00', 60, 'Wetlands', 'open'),
         (4, '2025-08-10 11:30:00', 90, 'Sanctuary', 'accepted'),
-        (5, '2025-08-10 08:15:00', 120, 'Pet Place', 'completed');`);
+        (5, '2025-08-10 08:15:00', 120, 'Pet Place', 'open');`);
 } catch (err){
     console.error('Error data', err);
 }
