@@ -89,9 +89,6 @@
         async function dogList(){
           try{
           const user = JSON.parse(localStorage.getItem('user'));
-          if (!storedUser) {
-             throw new Error('User not logged in');
-         }
           const res = await fetch(`/api/users/${user.user_id}/dogs`);
           dogs.value = await res.json()
           }
