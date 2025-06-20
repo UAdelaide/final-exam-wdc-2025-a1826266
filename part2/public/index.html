@@ -40,9 +40,11 @@
           // Get username and password from inputs
           const username = document.getElementById('username').value;
           const password = document.getElementById('password').value;
+          // Send login to backend API
           fetch('/api/users/login',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
+            // 
             body: JSON.stringify({username, password})
           })
           .then(res=>{
