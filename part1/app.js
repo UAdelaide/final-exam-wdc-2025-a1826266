@@ -28,5 +28,7 @@ try{
         ((SELECT dog_id FROM Dogs WHERE name = 'Riku'), '2025-08-10 11:30:00', '90', 'Sanctuary' 'accepted'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Brendan'), '2025-08-10 08:15:00', '120', 'Pet Place' 'closed'),`)
 
+} catch (err){
+    console
 }
 }
