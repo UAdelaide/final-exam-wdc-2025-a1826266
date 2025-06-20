@@ -27,7 +27,6 @@ try{
         ((SELECT dog_id FROM Dogs WHERE name = 'Ben'), '2025-07-10 10:00:00', 60, 'Wetlands', 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Chris'), '2025-08-10 11:30:00', 90, 'Sanctuary', 'accepted'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Lorry'), '2025-08-10 08:15:00', 120, 'Pet Place', 'closed');`);
-
 } catch (err){
     console.error('Error data', err);
 }
