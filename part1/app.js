@@ -40,6 +40,8 @@ async function main() {
             const[rows] = await connection.query('SELECT * FROM Dogs;');
             res.json(rows);
         }
-        catch
+        catch(err){
+            res.status
+        }
     })
 }
