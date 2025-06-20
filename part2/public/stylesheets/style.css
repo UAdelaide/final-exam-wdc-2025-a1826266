@@ -95,14 +95,7 @@ button {
     margin: 0 0.2em;
     color: white;
 }
-.login-button{
-    background-color: rgb(0, 149, 255);
-    border: hidden;
-    border-radius: 0.3em;
-    padding: 0.6em;
-    margin: 0 0.2em;
-    color: white;
-}
+
 button:hover {
     background-color: rgb(0, 120, 230);
 }
