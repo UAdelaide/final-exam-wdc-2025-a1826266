@@ -34,8 +34,10 @@
           message: 'Welcome to the Dog Walking Service!'
         };
       },
+      // Method for when user clicks login buttom
       methods:{
         login(){
+          // Get username and password from inputs
           const username = document.getElementById('username').value;
           const password = document.getElementById('password').value;
           fetch('/api/users/login',{
