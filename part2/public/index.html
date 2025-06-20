@@ -94,7 +94,7 @@
         }
       },
       mounted(){
-        fetch('/api/dogs')
+        fetch('/api/users/dogs')
         .then(res=>res.json())
         .then(dogs =>{
           return Promise.all(
