@@ -41,7 +41,7 @@ async function main() {
             res.json(rows);
         }
         catch(err){
-            res.status
+            res.status(500).json('failed dogs');
         }
     })
 }
