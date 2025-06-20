@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+// Router get 
 router.get('/:ownerId/dogs', async (req, res)=>{
   const ownerId = req.params.ownerId;
   try{
