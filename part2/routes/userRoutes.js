@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 // Router get to find the dogs that correspond to the logged in ID
 router.get('/:ownerId/dogs', async (req, res)=>{
-  // OwnerID initialized
+  // Extracts ownerID
   const ownerId = req.params.ownerId;
   try{
     // Database query to find the dogs
