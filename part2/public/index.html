@@ -97,7 +97,9 @@
         fetch('/api/dogs')
         .then(res=>res.json())
         .then(dogs =>{
-          .then
+          return Promise.all(
+            dogs.map(dog =>)
+          )
         })
       }
     }).mount('#app');
