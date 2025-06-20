@@ -87,9 +87,14 @@
         const message = ref('');
         const error = ref('');
         async function dogList(){
+          try{
           const user = JSON.parse(localStorage.getItem('user'));
           const res = await fetch(`/api/users/${user.user_id}/dogs`);
           dogs.value = await res.json()
+          }
+          catch(err){
+            error.value = err.message;
+          }
         }
         async function loadWalks() {
           try {
