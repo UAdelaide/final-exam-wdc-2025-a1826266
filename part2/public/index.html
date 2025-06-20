@@ -100,7 +100,10 @@
           return Promise.all(
             dogs.map(dog =>
               fetch('https://dog.ceo/api/breeds/image/random')
-              .then
+              .then(res=>{
+                if (!res.ok) throw new Error("Failed image");
+                return res.json();
+              })
               .then(res=> res.json())
               .then(image => ({ ...dog, image: image.message}))
             )
