@@ -39,7 +39,6 @@
       <th style="padding: 12px;">Photo</th>
     </tr>
     </thead>
-  </table>
   <tbody>
     <tr v-for="dog in dogs" :key="dog.dog_id">
       <td>{{ dog.dog_id }}</td>
@@ -51,7 +50,7 @@
       </td>
     </tr>
   </tbody>
-
+</table>
   <script>
     const { createApp } = Vue;
     createApp({
