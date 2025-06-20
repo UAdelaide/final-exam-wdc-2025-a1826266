@@ -29,10 +29,11 @@
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
     <!--Added table for all dog information-->
       <h2 style="text-align: center;">All Registered Dogs</h2>
-      <!--Center table with -->
+      <!--Center table with tex align-->
   <table border="1" style="margin:0 auto; text-align: center;">
     <thead>
     <tr>
+      <!--Lists all attributes we want, padding to keep them seperate-->
       <th style="padding: 12px;">Dog ID</th>
       <th style="padding: 12px;">Name</th>
       <th style="padding: 12px;">Size</th>
@@ -41,6 +42,7 @@
     </tr>
     </thead>
   <tbody>
+    <!---->
     <tr v-for="dog in dogs" :key="dog.dog_id">
       <td>{{ dog.dog_id }}</td>
       <td>{{ dog.name }}</td>
