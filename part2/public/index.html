@@ -95,8 +95,8 @@
       },
       mounted(){
         try{
-        fetch('/api/users/dogs');
-        .then(res=>res.json());
+        const doginfo = fetch('/api/users/dogs');
+        .then(res=>res.json())
         for (const dog of dogs){
           const imagerandom = await fetch('https://dog.ceo/api/breeds/image/random');
           const imageData = await imagerandom.json();
