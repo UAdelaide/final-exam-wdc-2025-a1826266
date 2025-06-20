@@ -4,7 +4,7 @@ const db = require('../models/db');
 router.get('/:ownerId/dogs', async (req, res)=>{
   const ownnerID = req.params.ownerId;
   try{
-    const[rows] = await db.query(`SELECT dog_id, name`)
+    const[rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id=?`, [ownerId]);
   }
 })
 // GET all users (for admin/testing)
