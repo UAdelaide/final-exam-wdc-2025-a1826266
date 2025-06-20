@@ -68,5 +68,9 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 });
-router.get('/dogs')
+router.get('/dogs', async(req, res)=>{
+  try{
+    cosnt[rows] = await db.query
+  }
+})
 module.exports = router;
