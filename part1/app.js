@@ -46,7 +46,7 @@ async function main() {
     });
     app.get('/api/walkrequests/open', async (req, res)=>{
         try{
-            const[rows] = await connection.query('')
+            const[rows] = await connection.query('SELECT * FROM WalkRequests WHERE status = open;')
         }
     })
 }
