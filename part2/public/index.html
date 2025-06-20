@@ -98,7 +98,9 @@
         .then(res=>res.json())
         .then(dogs =>{
           return Promise.all(
-            dogs.map(dog =>)
+            dogs.map(dog =>
+              fetch()
+            )
           )
         })
       }
