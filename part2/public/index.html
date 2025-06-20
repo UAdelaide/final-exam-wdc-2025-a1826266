@@ -101,7 +101,7 @@
             dogs.map(dog =>
               fetch('https://dog.ceo/api/breeds/image/random')
               .then(res=> res.json())
-              .then(image => ({ ...dog, photo: photo.message}))
+              .then(image => ({ ...dog, image: image.message}))
             )
           )
         })
