@@ -53,7 +53,8 @@
           try{
             // Fetches user from route
             const res = await fetch('/api/users/me');
-            user.value = await res.json();
+            const data = await res.json();
+            return data;
           }
           // Catches errors
           catch(err){
