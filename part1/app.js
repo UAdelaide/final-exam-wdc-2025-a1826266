@@ -29,6 +29,6 @@ try{
         ((SELECT dog_id FROM Dogs WHERE name = 'Brendan'), '2025-08-10 08:15:00', '120', 'Pet Place' 'closed'),`)
 
 } catch (err){
-    console
+    console.error('Error data', err);
 }
 }
