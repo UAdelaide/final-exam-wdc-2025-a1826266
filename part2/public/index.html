@@ -101,8 +101,8 @@
           const imageData = await imagerandom.json();
           dog.image = imagerandom.message;
         }
-          this.dogs = imageDogs;
-        .catch(err=> console.error('error finding dogg'))
+        this.dogs = dogs;
+      }catch(err=> console.error('error finding dogg'))
       }
     }).mount('#app');
   </script>
