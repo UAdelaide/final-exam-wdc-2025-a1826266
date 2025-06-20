@@ -47,9 +47,10 @@
             if(!res.ok) throw new Error('Fail login');
             return res.json();
           })
-          .then(data=>){
-            alert()
-          }
+          .then(data=>{
+            alert(`welcome`);
+          })
+          .catch(err=>)
         }
       }
     }).mount('#app');
