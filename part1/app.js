@@ -55,7 +55,8 @@ async function main() {
     });
     app.get('/api/walkers/summary', async (req, res)=>{
         try{
-            const[rows] = await connection.query(`SELECT Users.username, COUNT(walk)`)
+            const[rows] = await connection.query(`SELECT Users.user_id AS walker_id,
+                users`)
         }
     })
 }
