@@ -70,10 +70,12 @@ router.post('/login', async (req, res) => {
 });
 // Router to get dog information
 router.get('/dogs', async(req, res)=>{
+  // Query database for all dog information
   try{
     const[rows] = await db.query('SELECT * FROM Dogs');
     res.json(rows);
   }
+  // Catches errors
   catch(err){
     res.status(500).json({error: 'Failed'});
   }
