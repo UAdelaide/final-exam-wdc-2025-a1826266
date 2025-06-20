@@ -60,10 +60,11 @@ async function main() {
                 FROM Users LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id
                 LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
                 WHERE Users.role = 'walker' GROUP BY Users.user_id, Users.username, Users.email;`);
-                
+                res.json(rows);
         }
         catch(err){
             res.status(500).json('failed summary');
         }
     });
+    app.listen()
 }
