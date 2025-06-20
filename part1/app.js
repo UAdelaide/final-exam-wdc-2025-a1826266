@@ -21,6 +21,7 @@ try{
         ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Ben', 'medium'),
         ((SELECT user_id FROM Users WHERE username = 'dogwalk'), 'Chris', 'small'),
         ((SELECT user_id FROM Users WHERE username = 'adam1'), 'Lorry', 'large');`)
-    await connection.query(`INSERT INTO WalkRequests (dog_id, requested_time, duration`)
+    await connection.query(`INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
+        `)
 }
 }
