@@ -28,23 +28,7 @@
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
   </div>
-  <h2 style="text-align: center;">All Registered Dogs</h2>
-  <table border="1" style="margin:0 auto; text-align: center;">
-    <thead>
-    <tr>
-      <th style="padding: 12px;">Dog ID</th>
-      <th style="padding: 12px;">Name</th>
 
-    </tr>
-    </thead>
-  <tbody>
-    <tr v-for="dog in dogs" :key="dog.dog_id">
-      <td>{{ dog.dog_id }}</td>
-      <td>{{ dog.name }}</td>
-
-    </tr>
-  </tbody>
-</table>
   <script>
     const { createApp } = Vue;
     createApp({
@@ -91,7 +75,19 @@
         fetch('/api/users/dogs')
         .then(res=>res.json())
         .then(dogs =>{
-          this.dogs = dogs;
+          return Promise.all(
+            dogs.map(dog =>
+              fetch('https://dog.ceo/api/breeds/image/random')
+              .then(res=>{
+                if (!res.ok) throw new Error("Failed image");
+                return res.json();
+              })
+              .then(image => ({ ...dog, image: image.message}))
+            )
+          )
+        })
+        .then(imageDogs =>{
+          this.dogs = imageDogs;
         })
         .catch(err=> console.error('error finding dogg'))
       }
