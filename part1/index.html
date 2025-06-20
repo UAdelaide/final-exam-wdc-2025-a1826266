@@ -17,7 +17,7 @@
                     return {dogimage: ''}
                 },
                 methods:{
-                async mounted(){
+                async fetchDog(){
                     const res = await fetch('https://dog.ceo/dog-api/documentation/random');
                     const json = await res.json();
                     this.dogimage = data.message;
