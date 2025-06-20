@@ -29,7 +29,7 @@
               <option value="" disabled selected>--Choose a dog--</option>
               <!--Populates as dog count increases-->
               <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
-                <!---->
+                <!--Prints dog name-->
                 {{ dog.name }}
               </option>
             </select>
