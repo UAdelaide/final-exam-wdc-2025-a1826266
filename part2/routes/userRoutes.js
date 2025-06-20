@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 router.get('/:ownerId/dogs', async (req, res)=>{
-  
+  const ownnerID = req.params.ownerId;
+  try{
+    
+  }
 })
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
