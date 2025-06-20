@@ -57,7 +57,7 @@
             return res.json();
           })
           .then(data =>{
-            localStorage.setItem('user')
+            localStorage.setItem('user', JSON.stringify(data.user));
           })
           // Redirect the user to the corresponding paths based on their roles
           .then(data=>{
