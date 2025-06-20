@@ -49,6 +49,9 @@ async function main() {
             const[rows] = await connection.query("SELECT * FROM WalkRequests WHERE status = 'open';")
             res.json(rows);
         }
-        catch(err)
-    })
+        catch(err){
+            res.status(500).json('failed requests');
+        }
+    });
+    app.get
 }
