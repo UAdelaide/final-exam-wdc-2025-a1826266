@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-// Router get 
+// Router get to find the dogs that correspond to the logged in ID
 router.get('/:ownerId/dogs', async (req, res)=>{
+  // OwnerID initialized
   const ownerId = req.params.ownerId;
   try{
+    // Database query to find the dogs
     const[rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id=?`, [ownerId]);
     res.json(rows);
   }
