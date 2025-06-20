@@ -15,7 +15,7 @@ try{
     ('carol123', 'carol@example.com', 'hashed101', 'owner'),
     ('dogwalk', 'dogwalk@example.com', 'hashed202', 'walker'),
     ('adam1', 'adam@example.com', 'hashed111', 'walker');`)
-    
+    await connection.query(``)
 
 }
 }
