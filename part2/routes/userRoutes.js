@@ -5,6 +5,10 @@ router.get('/:ownerId/dogs', async (req, res)=>{
   const ownnerID = req.params.ownerId;
   try{
     const[rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id=?`, [ownerId]);
+    res.json(rows);
+  }
+  catch(err){
+    res.
   }
 })
 // GET all users (for admin/testing)
