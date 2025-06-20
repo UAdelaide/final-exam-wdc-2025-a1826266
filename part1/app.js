@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const app = express();
 const port = 8080;
 const config = {
-    host  'localhost',
-    user = root
-
+    host: 'localhost',
+    user: root
+    database: DogSer
 }
