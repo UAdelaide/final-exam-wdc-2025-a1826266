@@ -54,6 +54,7 @@
             // Fetches user from route
             const res = await fetch('/api/users/me');
             const data = await res.json();
+            // Returns data for the user
             return data;
           }
           // Catches errors
@@ -72,6 +73,7 @@
         }
         async function applyToWalk(requestId) {
           try {
+            const user = getUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
