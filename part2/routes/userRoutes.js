@@ -11,6 +11,7 @@ router.get('/:ownerId/dogs', async (req, res)=>{
     // Send with json
     res.json(rows);
   }
+  // Catch errors
   catch(err){
     res.status(500).json({error: 'failed'});
   }
