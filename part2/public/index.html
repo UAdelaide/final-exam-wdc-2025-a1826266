@@ -97,11 +97,15 @@
         try {
         // Fetch list of dogs from backend
         const doginfo = await fetch('/api/users/dogs');
-        // Parse 
+        // Parse as JSON
         const dogs = await doginfo.json();
+        // Loop through each dog
         for (const dog of dogs){
+          // Find a random image from the API
           const imagerandom = await fetch('https://dog.ceo/api/breeds/image/random');
+          // Parse image as json
           const imageData = await imagerandom.json();
+          // Add 
           dog.image = imageData.message;
         }
         this.dogs = dogs;
