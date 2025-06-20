@@ -32,6 +32,7 @@ try{
     console.error('Error data', err);
 }
 }
-async function name(params) {
+async function main() {
+    const connection = await mysql.createConnection(config);
     
 }
