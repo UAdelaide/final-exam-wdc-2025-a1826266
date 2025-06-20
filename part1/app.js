@@ -43,5 +43,6 @@ async function main() {
         catch(err){
             res.status(500).json('failed dogs');
         }
-    })
+    });
+    app.get('')
 }
