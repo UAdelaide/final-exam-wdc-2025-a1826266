@@ -97,7 +97,8 @@
         fetch('/api/users/dogs')
         .then(res=>res.json())
         .then(dogs =>{
-
+          this.dogs = dogs;
+        })
         .catch(err=> console.error('error finding dogg'))
       }
     }).mount('#app');
