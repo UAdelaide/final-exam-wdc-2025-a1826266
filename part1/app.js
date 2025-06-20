@@ -32,3 +32,6 @@ try{
     console.error('Error data', err);
 }
 }
+async function name(params) {
+    
+}
