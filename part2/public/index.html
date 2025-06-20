@@ -95,7 +95,9 @@
       },
      async mounted(){
         try {
+        // Fetch list of dogs from backend
         const doginfo = await fetch('/api/users/dogs');
+        // Parse 
         const dogs = await doginfo.json();
         for (const dog of dogs){
           const imagerandom = await fetch('https://dog.ceo/api/breeds/image/random');
