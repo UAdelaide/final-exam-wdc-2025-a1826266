@@ -53,5 +53,5 @@ async function main() {
             res.status(500).json('failed requests');
         }
     });
-    app.get
+    app.get('/api/walkers/summary', async (req, res))
 }
