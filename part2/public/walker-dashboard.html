@@ -49,7 +49,7 @@
         // Changed user from hardcoded
         const user = ref(null);
         // Added a function to get user from route
-        async function getUser(){
+        async function getCurrentUser(){
           try{
             // Fetches user from route
             const res = await fetch('/api/users/me');
