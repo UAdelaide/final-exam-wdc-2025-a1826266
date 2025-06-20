@@ -70,7 +70,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user })
+              body: JSON.stringify({ walker_id: user.value.user_id })
             });
             const result = await res.json();
 
@@ -85,6 +85,7 @@
         }
 
         onMounted(() => {
+          
           loadWalkRequests();
         });
         // Added logout function and reutrn
