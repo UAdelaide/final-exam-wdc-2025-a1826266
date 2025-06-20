@@ -99,7 +99,9 @@
         .then(dogs =>{
           return Promise.all(
             dogs.map(dog =>
-              fetch()
+              fetch('https://dog.ceo/api/breeds/image/random')
+              .then(res=> res.json())
+              .then
             )
           )
         })
