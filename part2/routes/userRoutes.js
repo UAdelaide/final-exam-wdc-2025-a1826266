@@ -38,7 +38,7 @@ router.get('/me', (req, res) => {
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
-// Changed from input 
+// Changed from input receiving email to it recieving a username instead
   try {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
