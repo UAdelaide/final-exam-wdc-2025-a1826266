@@ -11,7 +11,7 @@
 
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
-    <!-- New div added for username and password -->
+    <!-- New divs added for username and password input fields-->
     <div>
       <label for="username" style="font-weight: bold;">Username</label><br>
       <input type="text" id="username" placeholder="Enter username">
@@ -20,6 +20,7 @@
       <label for="password" style="font-weight: bold;">Password</label><br>
       <input type="password" id="password" placeholder="Enter password">
     </div>
+    <!-- Button added to submit -->
     <button type="submit" style="margin-top: 8px;" @click="login">Login</button>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
