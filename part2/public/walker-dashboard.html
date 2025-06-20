@@ -46,9 +46,12 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
+        // Changed user from hardcoded
         const user = ref(null);
+        // Added a function to get user from route
         async function getUser(){
           try{
+            // Fetches user from route
             const res = await fetch('/api/users/me');
             user.value = await res.json();
           }
