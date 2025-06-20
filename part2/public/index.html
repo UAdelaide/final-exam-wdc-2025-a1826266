@@ -105,9 +105,10 @@
           const imagerandom = await fetch('https://dog.ceo/api/breeds/image/random');
           // Parse image as json
           const imageData = await imagerandom.json();
-          // Add 
+          // Add image to the current dog
           dog.image = imageData.message;
         }
+        // Re
         this.dogs = dogs;
       }catch(err){
         console.error('error finding dog');
