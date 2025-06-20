@@ -96,7 +96,9 @@
       mounted(){
         fetch('/api/users/dogs')
         .then(res=>res.json())
-        .then(dogs 
+        for (const dog of dogs){
+          const imagerandom = await fetch('')
+        }
         .then(imageDogs =>{
           this.dogs = imageDogs;
         })
