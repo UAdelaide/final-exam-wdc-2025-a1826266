@@ -38,7 +38,7 @@ async function main() {
     await datainsert(connection);
     app.get('/api/dogs', async (req, res)=> {
         try{
-            const[rows] = await connection.query('SELECT * FROM Dogs.name AS Dog_name, Dogs.size;');
+            const[rows] = await connection.query('SELECT * FROM Dogs.name AS Dog_name, Dogs.size, Users.username AS owner_username FROM Dogs JOIN Users ON ;');
             res.json(rows);
         }
         catch(err){
